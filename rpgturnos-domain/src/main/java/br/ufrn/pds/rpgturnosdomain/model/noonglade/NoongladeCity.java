@@ -14,6 +14,7 @@ public class NoongladeCity {
 		String name = scan.nextLine();
 		Character.setName(name);
 		System.out.println("- Ah, isso mesmo! Seu nome é " + Character.getName() + ".");
+		Character.setRole();
 		System.out.println("\n\"Você boceja e depois sai. Está um lindo dia em sua cidade natal de Noonglade.\nAs pessoas já estão lá fora se misturando e os pássaros estão cantando.\"");
 	}
 }
