@@ -22,7 +22,7 @@ public class Character {
 			"\nVida: " + life + "/" + maxLife +
 			"\nForça: " + minDamage + "-" + maxDamage +
 			"\nPoder: " + magic +
-			"\nPoder: " + intelligence +
+			"\nInteligência: " + intelligence +
 			"\nAgilidade: " + speed +
 			"\nPorção: --" +
 			"\nOuro: --"
