@@ -28,4 +28,12 @@ public class Character {
 			"\nOuro: --"
 		);
 	}
+
+	public static String getName() {
+		return name;
+	}
+
+	public static void setName(String name) {
+		Character.name = name;
+	}
 }
