@@ -29,6 +29,10 @@ public class Character {
 		);
 	}
 
+	public static void heal() {
+		life = maxLife;
+	}
+
 	public static void setRole() {
 		System.out.println(
 			"\n\t1. Cavaleiro" +
@@ -52,6 +56,8 @@ public class Character {
 			speed = 9;
 
 			System.out.println("- Você é um nobre cavaleiro.");
+
+			Character.heal();
 		}
 
 		if (choice == 2) {
@@ -65,6 +71,8 @@ public class Character {
 			speed = 7;
 
 			System.out.println("- Você é um forte guerreiro.");
+
+			Character.heal();
 		}
 
 		if (choice == 3) {
@@ -78,6 +86,8 @@ public class Character {
 			speed = 5;
 
 			System.out.println("- Você é um furtivo arqueiro.");
+
+			Character.heal();
 		}
 
 		if (choice == 4) {
@@ -91,6 +101,8 @@ public class Character {
 			speed = 4;
 
 			System.out.println("- Você é um devoto clérigo.");
+
+			Character.heal();
 		}
 
 		if (choice == 5) {
@@ -104,6 +116,8 @@ public class Character {
 			speed = 6;
 
 			System.out.println("- Você é um impressionante mago.");
+
+			Character.heal();
 		}
 
 		if (choice <= 0 || choice > 5) {
@@ -117,6 +131,8 @@ public class Character {
 			speed = 2;
 
 			System.out.println("\n- Já que não se decidiu, você está fadado a ser um mero plebeu!");
+
+			Character.heal();
 		}
 	}
 
