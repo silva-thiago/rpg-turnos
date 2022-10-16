@@ -119,6 +119,10 @@ public class Character {
 
 			System.out.println("- Você é um mero plebeu.");
 		}
+
+		if (choice == 0 || choice > 6) {
+			Character.setRole();
+		}
 	}
 
 	public static String getName() {
