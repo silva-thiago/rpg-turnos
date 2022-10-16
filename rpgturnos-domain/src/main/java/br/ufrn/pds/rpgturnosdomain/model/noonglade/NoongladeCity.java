@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class NoongladeCity {
 	private static final Scanner scan = new Scanner(System.in);
+	public static int choice;
 
 	public static void beginning() {
 		System.out.println("\n\"Seus olhos se abrem e você rola para fora de sua cama de lençol. A luz do sol está brilhando em seu quarto.\nSua mente ainda está nebulosa, então você deve se lembrar qual é o seu nome…\"");
@@ -31,5 +32,30 @@ public class NoongladeCity {
 			"\n\t3. Ir para sua casa" +
 			"\n\t4. Andar pela cidade de Noonglade"
 		);
+		System.out.print("\n- O que desejas fazer agora? ");
+		choice = scan.nextInt();
+
+		if (choice == 1) {
+			System.out.println("\n\"Você olha em volta, conversa com alguns velhos amigos ao longo do caminho.\nNada muito interessante parece estar acontecendo.\"");
+		}
+
+		if (choice == 2) {
+			System.out.println("\n\"Você vai para a loja localizada no coração da cidade de Noonglade.\"");
+			System.out.println("\n//TODO: implementar loja.");
+		}
+
+		if (choice == 3) {
+			System.out.println("\n\"Você retorna para sua humilde morada.\"");
+			System.out.println("\n//TODO: implementar casa.");
+		}
+
+		if (choice == 4) {
+			System.out.println("\n\"Você se despede de seus amigos e viaja pela cidade de Noonglade.\"");
+			System.out.println("\n//TODO: implementar movimentação no mapa.");
+		}
+
+		if (choice <= 0 || choice > 4) {
+			System.out.println("\n- Se estiver cansado, você pode ir na sua casa.");
+		}
 	}
 }
