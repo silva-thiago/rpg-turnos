@@ -43,26 +43,80 @@ public class Character {
 		int choice = scan.nextInt();
 
 		if (choice == 1) {
+			role = "Cavaleiro";
+			symbol = "Ⰰ";
+			maxLife = 18;
+			maxDamage = 5;
+			minDamage = 1;
+			magic = 0;
+			intelligence = 8;
+			speed = 9;
+
 			System.out.println("- Você é um nobre cavaleiro.");
 		}
 
 		if (choice == 2) {
+			role = "Guerreiro";
+			symbol = "Ⱈ";
+			maxLife = 15;
+			maxDamage = 8;
+			minDamage = 1;
+			magic = 0;
+			intelligence = 7;
+			speed = 7;
+
 			System.out.println("- Você é um forte guerreiro.");
 		}
 
 		if (choice == 3) {
+			role = "Arqueiro";
+			symbol = "Ⱝ";
+			maxLife = 14;
+			maxDamage = 6;
+			minDamage = 4;
+			magic = 0;
+			intelligence = 6;
+			speed = 5;
+
 			System.out.println("- Você é um furtivo arqueiro.");
 		}
 
 		if (choice == 4) {
+			role = "Clérigo";
+			symbol = "Ⰺ";
+			maxLife = 12;
+			maxDamage = 5;
+			minDamage = 3;
+			magic = 2;
+			intelligence = 5;
+			speed = 4;
+
 			System.out.println("- Você é um devoto clérigo.");
 		}
 
 		if (choice == 5) {
+			role = "Mago";
+			symbol = "Ⰼ";
+			maxLife = 20;
+			maxDamage = 3;
+			minDamage = 4;
+			magic = 10;
+			intelligence = 9;
+			speed = 6;
+
 			System.out.println("- Você é um impressionante mago.");
 		}
 
 		if (choice == 6) {
+			role = "Plebeu";
+			symbol = "Ⱓ";
+			maxLife = 10;
+			maxDamage = 2;
+			minDamage = 1;
+			magic = 0;
+			intelligence = 3;
+			speed = 2;
+
 			System.out.println("- Você é um mero plebeu.");
 		}
 	}
