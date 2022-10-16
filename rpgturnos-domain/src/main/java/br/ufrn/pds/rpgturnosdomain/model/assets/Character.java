@@ -35,8 +35,7 @@ public class Character {
 			"\n\t2. Guerreiro" +
 			"\n\t3. Arqueiro" +
 			"\n\t4. Clérigo" +
-			"\n\t5. Mago" +
-			"\n\t6. Plebeu"
+			"\n\t5. Mago"
 		);
 		System.out.print("\n- Quem você é das opções acima? ");
 
@@ -107,7 +106,7 @@ public class Character {
 			System.out.println("- Você é um impressionante mago.");
 		}
 
-		if (choice == 6) {
+		if (choice <= 0 || choice > 5) {
 			role = "Plebeu";
 			symbol = "Ⱓ";
 			maxLife = 10;
@@ -117,11 +116,7 @@ public class Character {
 			intelligence = 3;
 			speed = 2;
 
-			System.out.println("- Você é um mero plebeu.");
-		}
-
-		if (choice <= 0 || choice > 6) {
-			Character.setRole();
+			System.out.println("\n- Já que não se decidiu, você está fadado a ser um mero plebeu!");
 		}
 	}
 
