@@ -20,5 +20,16 @@ public class NoongladeCity {
 		Character.setRole();
 
 		System.out.println("\n\"Você boceja e depois sai. Está um lindo dia em sua cidade natal, Noonglade.\nAs pessoas já estão lá fora se misturando e os pássaros estão cantando.\"");
+
+		NoongladeCity.noongladeCity();
+	}
+
+	public static void noongladeCity() {
+		System.out.println(
+			"\n\t1. Olhar em volta" +
+			"\n\t2. Visitar a loja" +
+			"\n\t3. Ir para sua casa" +
+			"\n\t4. Andar pela cidade de Noonglade"
+		);
 	}
 }
