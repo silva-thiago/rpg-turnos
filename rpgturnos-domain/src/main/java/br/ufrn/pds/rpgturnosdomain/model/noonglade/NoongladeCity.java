@@ -37,11 +37,15 @@ public class NoongladeCity {
 
 		if (choice == 1) {
 			System.out.println("\n\"Você olha em volta, conversa com alguns velhos amigos ao longo do caminho.\nNada muito interessante parece estar acontecendo.\"");
+
+			NoongladeCity.noongladeCity();
 		}
 
 		if (choice == 2) {
 			System.out.println("\n\"Você vai para a loja localizada no coração da cidade de Noonglade.\"");
 			System.out.println("\n//TODO: implementar loja.");
+
+			NoongladeCity.noongladeCity();
 		}
 
 		if (choice == 3) {
@@ -56,6 +60,8 @@ public class NoongladeCity {
 
 		if (choice <= 0 || choice > 4) {
 			System.out.println("\n- Se estiver cansado, você pode ir na sua casa.");
+
+			NoongladeCity.noongladeCity();
 		}
 	}
 }
