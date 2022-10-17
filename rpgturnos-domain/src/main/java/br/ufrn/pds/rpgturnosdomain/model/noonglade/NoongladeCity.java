@@ -50,7 +50,8 @@ public class NoongladeCity {
 
 		if (choice == 3) {
 			System.out.println("\n\"Você retorna para sua humilde morada.\"");
-			System.out.println("\n//TODO: implementar casa.");
+
+			NoongladeCity.yourHouse();
 		}
 
 		if (choice == 4) {
@@ -61,6 +62,18 @@ public class NoongladeCity {
 		if (choice <= 0 || choice > 4) {
 			System.out.println("\n- Se estiver cansado, você pode ir na sua casa.");
 
+			NoongladeCity.noongladeCity();
+		}
+	}
+
+	public static void yourHouse() {
+		System.out.println(
+			"\n\t1. Olhar em volta" +
+			"\n\t2. Verificar status" +
+			"\n\t3. Descansar" +
+			"\n\t4. Sair"
+		);
+		System.out.print("\n- Chegastes em casa, o que vais fazer? ");
 			NoongladeCity.noongladeCity();
 		}
 	}
