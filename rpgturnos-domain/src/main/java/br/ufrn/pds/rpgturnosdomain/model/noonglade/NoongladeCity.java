@@ -95,7 +95,7 @@ public class NoongladeCity {
 		if (choice == 3) {
 			Character.heal();
 
-			System.out.println("\n\"Você fecha os olhos um pouco…");
+			System.out.println("\n\"Você fecha os olhos um pouco…\"");
 			System.out.println("\n- Sua vida foi restaurada.");
 
 			NoongladeCity.yourHouse();
