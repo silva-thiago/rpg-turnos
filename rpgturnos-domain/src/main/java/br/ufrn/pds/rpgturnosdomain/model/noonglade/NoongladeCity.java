@@ -74,6 +74,38 @@ public class NoongladeCity {
 			"\n\t4. Sair"
 		);
 		System.out.print("\n- Chegastes em casa, o que vais fazer? ");
+		choice = scan.nextInt();
+
+		if (choice == 1) {
+			System.out.println("\n\"Sua casa está do jeito que você deixou.\nSua cama de lençol em um canto e a mesa no outro.\"");
+
+			NoongladeCity.yourHouse();
+		}
+
+		if (choice == 2) {
+			System.out.println("\n…");
+			System.out.println("\n//TODO: implementar status da personagem.");
+
+			NoongladeCity.yourHouse();
+		}
+
+		if (choice == 3) {
+			Character.heal();
+
+			System.out.println("\n\"Você fecha os olhos um pouco…");
+			System.out.println("\n- Sua vida foi restaurada.");
+
+			NoongladeCity.yourHouse();
+		}
+
+		if (choice == 4) {
+			System.out.println("\n\"Você deixa sua casa.\"");
+
+			NoongladeCity.noongladeCity();
+		}
+
+		if (choice <= 0 || choice > 4) {
+			System.out.println("\n- Tá em dúvida? Qua tal descansar um pouco.");
 			NoongladeCity.noongladeCity();
 		}
 	}
