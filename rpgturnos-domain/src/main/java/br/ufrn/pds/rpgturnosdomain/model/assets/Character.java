@@ -136,11 +136,23 @@ public class Character {
 		}
 	}
 
+	public static String printSymbol() {
+		return symbol;
+	}
+
 	public static String getName() {
 		return name;
 	}
 
 	public static void setName(String name) {
 		Character.name = name;
+	}
+
+	public static int getLife() {
+		return life;
+	}
+
+	public static int getMaxLife() {
+		return maxLife;
 	}
 }
