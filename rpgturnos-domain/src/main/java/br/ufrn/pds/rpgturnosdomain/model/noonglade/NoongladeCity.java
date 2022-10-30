@@ -85,9 +85,7 @@ public class NoongladeCity {
 		}
 
 		if (choice == 2) {
-			System.out.println("\n…");
-			System.out.println("\n//TODO: implementar status da personagem.");
-
+			Character.status();
 			NoongladeCity.yourHouse();
 		}
 

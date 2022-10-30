@@ -15,7 +15,7 @@ public class Character {
 	private static int intelligence;
 	private static int speed;
 
-	private static void status() {
+	public static void status() {
 		System.out.println(
 			"\nPersona: " + role +
 			"\nNome: " + name +
