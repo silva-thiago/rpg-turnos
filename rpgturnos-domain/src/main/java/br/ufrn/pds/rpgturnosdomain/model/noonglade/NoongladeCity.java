@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class NoongladeCity {
 	private static final Scanner scan = new Scanner(System.in);
-	public static int choice;
+	private static int choice;
 
 	public static void beginning() {
 		System.out.println("\n\"Seus olhos se abrem e você rola para fora de sua cama de lençol. A luz do sol está brilhando em seu quarto.\nSua mente ainda está nebulosa, então você deve se lembrar qual é o seu nome…\"");
