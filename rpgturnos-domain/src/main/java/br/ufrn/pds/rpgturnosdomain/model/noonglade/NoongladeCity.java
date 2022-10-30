@@ -56,14 +56,13 @@ public class NoongladeCity {
 
 		if (choice == 4) {
 			System.out.println("\n\"Você se despede de seus amigos e viaja pela cidade de Noonglade.\"");
+			System.out.println("\n//TODO: implementar movimentação no mapa.");
 
 			NoongladeMap.move();
-
-			System.out.println("\n//TODO: implementar movimentação no mapa.");
 		}
 
 		if (choice <= 0 || choice > 4) {
-			System.out.println("\n- Se estiver cansado, você pode ir na sua casa.");
+			System.out.println("\n- Se estiver cansado, você pode ir até sua casa…");
 
 			NoongladeCity.noongladeCity();
 		}
@@ -108,8 +107,8 @@ public class NoongladeCity {
 		}
 
 		if (choice <= 0 || choice > 4) {
-			System.out.println("\n- Tá em dúvida? Qua tal descansar um pouco.");
-			NoongladeCity.noongladeCity();
+			System.out.println("\n- Tá em dúvida? Que tal descansar um pouco?");
+			NoongladeCity.yourHouse();
 		}
 	}
 }
