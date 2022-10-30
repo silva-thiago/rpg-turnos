@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class NoongladeMap {
 	private static final Scanner scan = new Scanner(System.in);
 	private static String move;
-	private static final int xAxisPosition = 4;
-	private static final int yAxisPosition = 3;
-	private static final int top = 7;
+	private static int xAxisPosition = 4;
+	private static int yAxisPosition = 3;
+	private static int top = 7;
 	private static final String[] map = {
 		"^^^^^^^^^^        ≈≈≈≈≈≈≈  ^^^^",
 		"^^^^^  ♛     ^^^    ≈≈≈     ^^^",
