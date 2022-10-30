@@ -43,21 +43,24 @@ public class NoongladeMap {
 
 			if (xAxisPosition == 7 && yAxisPosition == 9) {
 				System.out.println("\n- Você chega ao Reino do Norte de Cherry Ridge.");
-				System.out.println("\nTODO: implementar cidade extra");
+
+				CherryRidge.cherryRidge();
 
 				break;
 			}
 
 			if (xAxisPosition == 23 && yAxisPosition == 7) {
 				System.out.println("\n- Você chega à cidade montanhosa de Wind Heath.");
-				System.out.println("\nTODO: implementar cidade extra");
+
+				WindHeath.windHeath();
 
 				break;
 			}
 
 			if (xAxisPosition == 24 && yAxisPosition == 2) {
 				System.out.println("\n- Você chega à cidade portuária de Port.");
-				System.out.println("\nTODO: implementar cidade extra");
+
+				ThePort.thePort();
 
 				break;
 			}

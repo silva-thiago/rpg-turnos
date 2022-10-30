@@ -36,6 +36,7 @@ public class NoongladeCity {
 		choice = scan.nextInt();
 
 		if (choice == 1) {
+			System.out.println("\n\"Bem-vindo à cidade de Noonglade, " + Character.getName() + "\"");
 			System.out.println("\n\"Você olha em volta, conversa com alguns velhos amigos ao longo do caminho.\nNada muito interessante parece estar acontecendo.\"");
 
 			NoongladeCity.noongladeCity();
