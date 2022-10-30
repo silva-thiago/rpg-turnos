@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class NoongladeMap {
 	private static final Scanner scan = new Scanner(System.in);
-	private static String move;
 	private static int xAxisPosition = 4;
 	private static int yAxisPosition = 3;
 	private static int top = 7;
@@ -28,7 +27,8 @@ public class NoongladeMap {
 		System.out.println("\n- Use as teclas W, A, S e D para andar no mapa.");
 
 		NoongladeMap.printMap();
-		move = scan.nextLine();
+		String move = scan.nextLine();
+		NoongladeMap.getMove(move);
 	}
 
 	public static void printMap() {
