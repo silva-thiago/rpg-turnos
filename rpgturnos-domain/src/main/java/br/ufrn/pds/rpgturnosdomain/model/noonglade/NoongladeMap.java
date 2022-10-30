@@ -38,8 +38,8 @@ public class NoongladeMap {
 			System.out.println(map[aKey]);
 		}
 
-		System.out.println(map[top].substring(0, xAxisPosition));
-		System.out.println(Character.printSymbol());
+		System.out.print(map[top].substring(0, xAxisPosition));
+		System.out.print(Character.printSymbol());
 		System.out.println(map[top].substring(xAxisPosition + 1, map[top].length()));
 
 		for (int dKey = 0; dKey < top + yAxisPosition; ++dKey) {
