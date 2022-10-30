@@ -29,6 +29,11 @@ public class Character {
 		);
 	}
 
+	public static void gameOver(String death) {
+		System.out.println(death + " VOCÊ MORREU!\"\n- A sua história, " + name + ", chegou ao fim.");
+		System.out.println("\n======== FIM DE JOGO! =========");
+	}
+
 	public static void heal() {
 		life = maxLife;
 	}
@@ -150,6 +155,10 @@ public class Character {
 
 	public static int getLife() {
 		return life;
+	}
+
+	public static void loseLife(int loseLife) {
+		Character.life -= loseLife;
 	}
 
 	public static int getMaxLife() {

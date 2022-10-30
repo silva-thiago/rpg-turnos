@@ -64,6 +64,16 @@ public class NoongladeMap {
 
 				break;
 			}
+
+			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+				System.out.println("\n- Você não sabe nadar!");
+
+				Character.loseLife(3);
+
+				if (Character.getLife() < 1) {
+					Character.gameOver("\n\"Você engoliu muita água e se afogou…");
+				}
+			}
 		}
 	}
 
