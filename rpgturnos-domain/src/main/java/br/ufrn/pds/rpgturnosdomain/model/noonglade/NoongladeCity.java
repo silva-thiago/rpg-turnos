@@ -56,7 +56,6 @@ public class NoongladeCity {
 
 		if (choice == 4) {
 			System.out.println("\n\"Você se despede de seus amigos e viaja pela cidade de Noonglade.\"");
-			System.out.println("\n//TODO: implementar movimentação no mapa.");
 
 			NoongladeMap.move();
 		}
