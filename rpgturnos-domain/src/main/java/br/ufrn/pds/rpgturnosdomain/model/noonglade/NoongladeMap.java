@@ -114,7 +114,8 @@ public class NoongladeMap {
 
 		System.out.print(map[top].substring(0, xAxisPosition));
 		System.out.print(Character.printSymbol());
-		System.out.println(map[top].substring(xAxisPosition + 1, map[top].length()));
+		System.out.print(map[top].substring(xAxisPosition + 1, map[top].length()));
+		System.out.println();
 
 		for (int dKey = 0; dKey < top + yAxisPosition; ++dKey) {
 			System.out.println(map[dKey + 1]);
@@ -122,8 +123,8 @@ public class NoongladeMap {
 
 		System.out.println("===============================");
 		System.out.println(
-			"\nLife: " + Character.getLife() + "/" + Character.getMaxLife() +
-			"\t\tX: " + xAxisPosition +
+			"\nLife: " + Character.getLife() + "/" + Character.getMaxLife() + "\t\t\t\t" +
+			"\tX: " + xAxisPosition +
 			"\tY: " + yAxisPosition
 		);
 	}
