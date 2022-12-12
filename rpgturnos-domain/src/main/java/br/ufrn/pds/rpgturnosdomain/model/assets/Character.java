@@ -12,8 +12,9 @@ public class Character {
 	private static int maxDamage;
 	private static int minDamage;
 	private static int magic;
-	private static int intelligence;
 	private static int speed;
+
+	public Character() {}
 
 	public static void status() {
 		System.out.println(
@@ -22,20 +23,39 @@ public class Character {
 			"\nVida: " + life + "/" + maxLife +
 			"\nForça: " + minDamage + "-" + maxDamage +
 			"\nPoder: " + magic +
-			"\nInteligência: " + intelligence +
 			"\nAgilidade: " + speed +
-			"\nPorção: --" +
-			"\nOuro: --"
+			"\nPorção: Battle.getNumPots()" +
+			"\nOuro: Shop.getGold()"
 		);
 	}
 
 	public static void gameOver(String death) {
-		System.out.println(death + " VOCÊ MORREU!\"\n- A sua história, " + name + ", chegou ao fim.");
+		System.out.println(death + " VOCÊ MORREU!\"\nA sua história, " + name + ", chegou ao fim.");
 		System.out.println("\n======== FIM DE JOGO! =========");
 	}
 
-	public static void heal() {
+	public static void gameWon() {
+		System.out.println(
+			"\nVocê volta ao Imperador Kalahan e diz a ele que derrotou o mal que assola a terra de Zariadon." +
+			"\nEle está muito satisfeito e tem uma cerimônia em toda a cidade de Kalldirid em homenagem a você."
+		);
+		System.out.println("\n\"Salve o intrépido " + name + "!\"");
+		System.out.println("\n\n\nVocê ganhou! Obrigado por jogar!\n");
+	}
+
+		public static void heal() {
 		life = maxLife;
+	}
+
+	public static int getRole() {
+		if (role.equals("Cavaleiro")) { return 1; }
+		if (role.equals("Guerreiro")) { return 2; }
+		if (role.equals("Arqueiro")) { return 3; }
+		if (role.equals("Clérigo")) { return 4; }
+		if (role.equals("Mago")) { return 5; }
+		if (role.equals("Plebeu")) { return 6; }
+
+		return 0;
 	}
 
 	public static void setRole() {
@@ -46,7 +66,7 @@ public class Character {
 			"\n\t4. Clérigo" +
 			"\n\t5. Mago"
 		);
-		System.out.print("\n- Quem você é das opções acima? ");
+		System.out.print("\nQuem você é das opções acima? ");
 
 		int choice = scan.nextInt();
 
@@ -57,7 +77,6 @@ public class Character {
 			maxDamage = 5;
 			minDamage = 1;
 			magic = 0;
-			intelligence = 8;
 			speed = 9;
 
 			System.out.println("- Você é um nobre cavaleiro.");
@@ -72,7 +91,6 @@ public class Character {
 			maxDamage = 8;
 			minDamage = 1;
 			magic = 0;
-			intelligence = 7;
 			speed = 7;
 
 			System.out.println("- Você é um forte guerreiro.");
@@ -87,7 +105,6 @@ public class Character {
 			maxDamage = 6;
 			minDamage = 4;
 			magic = 0;
-			intelligence = 6;
 			speed = 5;
 
 			System.out.println("- Você é um furtivo arqueiro.");
@@ -102,7 +119,6 @@ public class Character {
 			maxDamage = 5;
 			minDamage = 3;
 			magic = 2;
-			intelligence = 5;
 			speed = 4;
 
 			System.out.println("- Você é um devoto clérigo.");
@@ -117,7 +133,6 @@ public class Character {
 			maxDamage = 3;
 			minDamage = 4;
 			magic = 10;
-			intelligence = 9;
 			speed = 6;
 
 			System.out.println("- Você é um impressionante mago.");
@@ -132,10 +147,9 @@ public class Character {
 			maxDamage = 2;
 			minDamage = 1;
 			magic = 0;
-			intelligence = 3;
 			speed = 2;
 
-			System.out.println("\n- Já que não se decidiu, você está fadado a ser um mero plebeu!");
+			System.out.println("\nJá que não se decidiu, você está fadado a ser um mero plebeu!");
 
 			Character.heal();
 		}
@@ -157,11 +171,67 @@ public class Character {
 		return life;
 	}
 
+	public static void gainLife(int gainLife) {
+		Character.life += gainLife;
+	}
+
 	public static void loseLife(int loseLife) {
 		Character.life -= loseLife;
 	}
 
 	public static int getMaxLife() {
 		return maxLife;
+	}
+
+	public static void changeMaxLife(int maxLife) {
+		Character.maxLife += maxLife;
+	}
+
+	public static int getMaxDamage() {
+		return maxDamage;
+	}
+
+	public static void gainMaxDamage(int maxDamage) {
+		Character.maxDamage += maxDamage;
+	}
+
+	public static void loseMaxDamage(int maxDamage) {
+		Character.maxDamage -= maxDamage;
+	}
+
+	public static int getMinDamage() {
+		return minDamage;
+	}
+
+	public static void gainMinDamage(int minDamage) {
+		Character.minDamage += minDamage;
+	}
+
+	public static void loseMinDamage(int minDamage) {
+		Character.minDamage -= minDamage;
+	}
+
+	public static int getMagic() {
+		return magic;
+	}
+
+	public static void changeMagic(int magic) {
+		Character.magic += magic;
+	}
+
+	public static int getSpeed() {
+		return speed;
+	}
+
+	public static void gainSpeed(int speed) {
+		Character.speed += speed;
+	}
+
+	public static void loseSpeed(int speed) {
+		Character.speed -= speed;
+	}
+
+	public static int getTotalStats() {
+		return maxLife + ((minDamage + maxDamage) / 2) + magic + speed;
 	}
 }
