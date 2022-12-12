@@ -9,8 +9,12 @@ public class CherryRidge {
 	private static int choice;
 
 	public static void cherryRidge() {
-		System.out.println("\n\t1. Olhar em volta" + "\n\t2. Visitar o mercado" + "\n\t3. Visitar a pousada" + "\n\t4. Visitar o palácio" + "\n\t5. Sair da cidade de Cherry Ridge");
-		System.out.print("\n- O que desejas fazer agora? ");
+		System.out.println("\n\t1. Olhar em volta" +
+			"\n\t2. Visitar o mercado" +
+			"\n\t3. Visitar a pousada" +
+			"\n\t4. Visitar o palácio" +
+			"\n\t5. Sair da cidade de Cherry Ridge");
+		System.out.print("\nO que desejas fazer agora? ");
 		choice = scan.nextInt();
 
 		if (choice == 1) {
@@ -41,7 +45,7 @@ public class CherryRidge {
 		}
 
 		if (choice <= 0 || choice > 5) {
-			System.out.println("\n- Se estiver cansado, você pode ir até sua casa…");
+			System.out.println("\nSe estiver cansado, você pode ir até sua casa…");
 
 			CherryRidge.cherryRidge();
 		}

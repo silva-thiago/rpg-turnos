@@ -26,7 +26,7 @@ public class NoongladeMap {
 	public static void move() {
 		boolean walking = true;
 
-		System.out.println("\n- Use as teclas W, A, S e D para andar no mapa.");
+		System.out.println("\nUse as teclas W, A, S e D para andar no mapa.");
 
 		while (walking) {
 			NoongladeMap.printMap();
@@ -34,7 +34,7 @@ public class NoongladeMap {
 			NoongladeMap.getMove(move);
 
 			if (xAxisPosition == 4 && yAxisPosition == 3) {
-				System.out.println("\n- Você chega à sua cidade natal Noonglade.");
+				System.out.println("\nVocê chega à sua cidade natal Noonglade.");
 
 				NoongladeCity.noongladeCity();
 
@@ -42,7 +42,7 @@ public class NoongladeMap {
 			}
 
 			if (xAxisPosition == 7 && yAxisPosition == 9) {
-				System.out.println("\n- Você chega ao Reino do Norte de Cherry Ridge.");
+				System.out.println("\nVocê chega ao Reino do Norte de Cherry Ridge.");
 
 				CherryRidge.cherryRidge();
 
@@ -50,7 +50,7 @@ public class NoongladeMap {
 			}
 
 			if (xAxisPosition == 23 && yAxisPosition == 7) {
-				System.out.println("\n- Você chega à cidade montanhosa de Wind Heath.");
+				System.out.println("\nVocê chega à cidade montanhosa de Wind Heath.");
 
 				WindHeath.windHeath();
 
@@ -58,7 +58,7 @@ public class NoongladeMap {
 			}
 
 			if (xAxisPosition == 24 && yAxisPosition == 2) {
-				System.out.println("\n- Você chega à cidade portuária de Port.");
+				System.out.println("\nVocê chega à cidade portuária de Port.");
 
 				ThePort.thePort();
 
@@ -66,12 +66,12 @@ public class NoongladeMap {
 			}
 
 			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
-				System.out.println("\n- Você não sabe nadar!");
+				System.out.println("\nVocês não sabem nadar!");
 
 				Character.loseLife(3);
 
 				if (Character.getLife() < 1) {
-					Character.gameOver("\n\"Você engoliu muita água e se afogou…");
+					Character.gameOver("\n\"Vocês engoliram muita água e se afogaram…");
 				}
 			}
 		}
