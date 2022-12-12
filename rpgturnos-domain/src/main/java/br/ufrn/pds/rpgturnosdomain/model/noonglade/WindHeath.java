@@ -19,7 +19,7 @@ public class WindHeath {
 			"\n\t1. Olhar em volta" +
 			"\n\t2. Visitar a loja" +
 			"\n\t3. Visitar a pousada" +
-			"\n\t4. Deixar Var Wind Heath"
+			"\n\t4. Sair"
 		);
 		System.out.print("\nO que desejas fazer? ");
 		choice = scan.nextInt();
