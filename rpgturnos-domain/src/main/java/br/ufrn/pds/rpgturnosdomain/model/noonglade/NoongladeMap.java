@@ -1,11 +1,14 @@
 package br.ufrn.pds.rpgturnosdomain.model.noonglade;
 
+import br.ufrn.pds.rpgturnosdomain.model.assets.Battle;
 import br.ufrn.pds.rpgturnosdomain.model.assets.Character;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class NoongladeMap {
 	private static final Scanner scan = new Scanner(System.in);
+	private static final Random rand = new Random();
 	private static int xAxisPosition = 4;
 	private static int yAxisPosition = 3;
 	private static int top = 7;
@@ -65,6 +68,10 @@ public class NoongladeMap {
 				break;
 			}
 
+			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
+				Battle.randEncounter();
+			}
+
 			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
 				System.out.println("\nVocês não sabem nadar!");
 
@@ -72,6 +79,14 @@ public class NoongladeMap {
 
 				if (Character.getLife() < 1) {
 					Character.gameOver("\n\"Vocês engoliram muita água e se afogaram…");
+				}
+			}
+
+			if (!map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^") || !map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+				int randEncounter = rand.nextInt(8);
+
+				if (randEncounter == 0) {
+					Battle.randEncounter();
 				}
 			}
 		}
