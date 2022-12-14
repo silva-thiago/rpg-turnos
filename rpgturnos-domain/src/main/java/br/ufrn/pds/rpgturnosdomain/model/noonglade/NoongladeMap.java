@@ -13,7 +13,7 @@ public class NoongladeMap {
 	private static int xAxisPosition = 4;
 	private static int yAxisPosition = 3;
 	private static int top = 7;
-	private static final String[] map = {
+	private static final String[] noongladeMap = {
 		"^^^^^^^^^^        ≈≈≈≈≈≈≈  ^^^^",
 		"^^^^^  ♛     ^^^    ≈≈≈     ^^^",
 		"^^^         ^^^^       ^^     ^",
@@ -56,20 +56,20 @@ public class NoongladeMap {
 
 				break;
 			} else if (xAxisPosition == 24 && yAxisPosition == 2) {
-				System.out.println("\nVocê chega à cidade portuária de Port.");
+				System.out.println("\nVocê chega à cidade portuária de The Port.");
 
 				ThePort.thePort();
 
 				break;
-			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
+			} else if (noongladeMap[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
 				Battle.randEncounter();
-			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
-				System.out.println("\nVocês não sabem nadar!");
+			} else if (noongladeMap[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+				System.out.println("\nVocê não sabe nadar!");
 
 				Character.loseLife(3);
 
 				if (Character.getLife() < 1) {
-					Character.gameOver("\n\"Vocês engoliram muita água e se afogaram…");
+					Character.gameOver("\n\"Você engoliu muita água e se afogou…");
 				}
 			} else {
 				int randEncounter = rand.nextInt(8);
@@ -100,22 +100,22 @@ public class NoongladeMap {
 			xAxisPosition++;
 		}
 
-		if (xAxisPosition > map[0].length() - 1) {
-			xAxisPosition = map[0].length() - 1;
+		if (xAxisPosition > noongladeMap[0].length() - 1) {
+			xAxisPosition = noongladeMap[0].length() - 1;
 		}
 
 		if (xAxisPosition < 0) {
 			xAxisPosition = 0;
 		}
 
-		if (top > map.length - 1) {
-			top = map.length - 1;
+		if (top > noongladeMap.length - 1) {
+			top = noongladeMap.length - 1;
 			yAxisPosition = 0;
 		}
 
-		if (yAxisPosition > map.length - 1) {
+		if (yAxisPosition > noongladeMap.length - 1) {
 			top = 0;
-			yAxisPosition = map.length - 1;
+			yAxisPosition = noongladeMap.length - 1;
 		}
 	}
 
@@ -123,16 +123,16 @@ public class NoongladeMap {
 		System.out.println("===============================");
 
 		for (int aKey = 0; aKey < top; ++aKey) {
-			System.out.println(map[aKey]);
+			System.out.println(noongladeMap[aKey]);
 		}
 
-		System.out.print(map[top].substring(0, xAxisPosition));
+		System.out.print(noongladeMap[top].substring(0, xAxisPosition));
 		System.out.print(Character.printSymbol());
-		System.out.print(map[top].substring(xAxisPosition + 1, map[top].length()));
+		System.out.print(noongladeMap[top].substring(xAxisPosition + 1, noongladeMap[top].length()));
 		System.out.println();
 
 		for (int dKey = 0; dKey < top + yAxisPosition; ++dKey) {
-			System.out.println(map[dKey + 1]);
+			System.out.println(noongladeMap[dKey + 1]);
 		}
 
 		System.out.println("===============================");

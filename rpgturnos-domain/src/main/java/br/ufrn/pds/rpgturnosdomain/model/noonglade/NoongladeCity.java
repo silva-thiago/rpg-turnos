@@ -17,7 +17,7 @@ public class NoongladeCity {
 		String name = scan.nextLine();
 		Character.setName(name);
 
-		System.out.println("- Ah, isso mesmo! Seu nome é " + Character.getName() + ".");
+		System.out.println("Ah, isso mesmo! Seu nome é " + Character.getName() + ".");
 
 		Character.setRole();
 

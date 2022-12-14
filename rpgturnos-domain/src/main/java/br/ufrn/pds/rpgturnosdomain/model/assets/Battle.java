@@ -108,7 +108,7 @@ public class Battle {
 		Battle.levelUp();
 
 		if (Character.getLife() < 1) {
-			Character.gameOver("Eles foram mortos pelo " + enemy + ".");
+			Character.gameOver("Você foi morto pelo " + enemy + ".");
 		} else if (enemyLife < 1 && enemy.equals("Dragão Carmesim")) {
 			Battle.dragonVictory();
 		} else if (enemyLife < 1 && enemy.equals("Cavaleiro Lupino")) {

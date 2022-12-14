@@ -73,13 +73,13 @@ public class Character {
 		if (choice == 1) {
 			role = "Cavaleiro";
 			symbol = "Ⰰ";
-			maxLife = 18;
+			maxLife = 20;
 			maxDamage = 5;
 			minDamage = 1;
 			magic = 0;
 			speed = 9;
 
-			System.out.println("- Você é um nobre cavaleiro.");
+			System.out.println("Você é um nobre cavaleiro.");
 
 			Character.heal();
 		}
@@ -87,13 +87,13 @@ public class Character {
 		if (choice == 2) {
 			role = "Guerreiro";
 			symbol = "Ⱈ";
-			maxLife = 15;
+			maxLife = 20;
 			maxDamage = 8;
 			minDamage = 1;
 			magic = 0;
 			speed = 7;
 
-			System.out.println("- Você é um forte guerreiro.");
+			System.out.println("Você é um forte guerreiro.");
 
 			Character.heal();
 		}
@@ -101,13 +101,13 @@ public class Character {
 		if (choice == 3) {
 			role = "Arqueiro";
 			symbol = "Ⱝ";
-			maxLife = 14;
+			maxLife = 20;
 			maxDamage = 6;
 			minDamage = 4;
 			magic = 0;
 			speed = 5;
 
-			System.out.println("- Você é um furtivo arqueiro.");
+			System.out.println("Você é um furtivo arqueiro.");
 
 			Character.heal();
 		}
@@ -115,13 +115,13 @@ public class Character {
 		if (choice == 4) {
 			role = "Clérigo";
 			symbol = "Ⰺ";
-			maxLife = 12;
+			maxLife = 20;
 			maxDamage = 5;
 			minDamage = 3;
 			magic = 2;
 			speed = 4;
 
-			System.out.println("- Você é um devoto clérigo.");
+			System.out.println("Você é um devoto clérigo.");
 
 			Character.heal();
 		}
@@ -135,7 +135,7 @@ public class Character {
 			magic = 10;
 			speed = 6;
 
-			System.out.println("- Você é um impressionante mago.");
+			System.out.println("Você é um impressionante mago.");
 
 			Character.heal();
 		}
@@ -143,7 +143,7 @@ public class Character {
 		if (choice <= 0 || choice > 5) {
 			role = "Plebeu";
 			symbol = "Ⱓ";
-			maxLife = 10;
+			maxLife = 20;
 			maxDamage = 2;
 			minDamage = 1;
 			magic = 0;

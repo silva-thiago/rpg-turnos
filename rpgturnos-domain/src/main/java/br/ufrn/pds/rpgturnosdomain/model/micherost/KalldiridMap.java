@@ -12,7 +12,7 @@ public class KalldiridMap {
 	private static int xAxisPosition = 4;
 	private static int yAxisPosition = 3;
 	private static int top = 7;
-	private static final String[] map = {
+	private static final String[] kalldiridMap = {
 		"   ^^^^^^^   ✠  ^^^^^^^^^^^^^^^",
 		" ♜   ^^^^^^^  ^^^^^ ^^^^^  ^^^^",
 		"^       ^^^^^^^^^     ^^   ♛  ^",
@@ -54,9 +54,9 @@ public class KalldiridMap {
 				KalldiridCity.kalldiridCity();
 
 				break;
-			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
+			} else if (kalldiridMap[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
 				Battle.randEncounter();
-			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+			} else if (kalldiridMap[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
 				System.out.println("\nVocês não sabem nadar!");
 
 				Character.loseLife(3);
@@ -93,22 +93,22 @@ public class KalldiridMap {
 			xAxisPosition++;
 		}
 
-		if (xAxisPosition > map[0].length() - 1) {
-			xAxisPosition = map[0].length() - 1;
+		if (xAxisPosition > kalldiridMap[0].length() - 1) {
+			xAxisPosition = kalldiridMap[0].length() - 1;
 		}
 
 		if (xAxisPosition < 0) {
 			xAxisPosition = 0;
 		}
 
-		if (top > map.length - 1) {
-			top = map.length - 1;
+		if (top > kalldiridMap.length - 1) {
+			top = kalldiridMap.length - 1;
 			yAxisPosition = 0;
 		}
 
-		if (yAxisPosition > map.length - 1) {
+		if (yAxisPosition > kalldiridMap.length - 1) {
 			top = 0;
-			yAxisPosition = map.length - 1;
+			yAxisPosition = kalldiridMap.length - 1;
 		}
 	}
 
@@ -116,16 +116,16 @@ public class KalldiridMap {
 		System.out.println("===============================");
 
 		for (int aKey = 0; aKey < top; ++aKey) {
-			System.out.println(map[aKey]);
+			System.out.println(kalldiridMap[aKey]);
 		}
 
-		System.out.print(map[top].substring(0, xAxisPosition));
+		System.out.print(kalldiridMap[top].substring(0, xAxisPosition));
 		System.out.print(Character.printSymbol());
-		System.out.print(map[top].substring(xAxisPosition + 1, map[top].length()));
+		System.out.print(kalldiridMap[top].substring(xAxisPosition + 1, kalldiridMap[top].length()));
 		System.out.println();
 
 		for (int dKey = 0; dKey < top + yAxisPosition; ++dKey) {
-			System.out.println(map[dKey + 1]);
+			System.out.println(kalldiridMap[dKey + 1]);
 		}
 
 		System.out.println("===============================");
