@@ -42,29 +42,21 @@ public class KalldiridMap {
 				Winsorin.winsorin();
 
 				break;
-			}
-
-			if(xAxisPosition == 28 && yAxisPosition == 2) {
+			} else if(xAxisPosition == 28 && yAxisPosition == 2) {
 				System.out.println("\nVocê chega na cidade florestal de Gladehollow.");
 
 				Gladehollow.gladehollow();
 
 				break;
-			}
-
-			if(xAxisPosition == 27 && yAxisPosition == 8) {
+			} else if(xAxisPosition == 27 && yAxisPosition == 8) {
 				System.out.println("\nVocê chega na Cidade Imperial de Kalldirid.");
 
 				KalldiridCity.kalldiridCity();
 
 				break;
-			}
-
-			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
+			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
 				Battle.randEncounter();
-			}
-
-			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
 				System.out.println("\nVocês não sabem nadar!");
 
 				Character.loseLife(3);
@@ -72,9 +64,7 @@ public class KalldiridMap {
 				if (Character.getLife() < 1) {
 					Character.gameOver("\n\"Vocês engoliram muita água e se afogaram…");
 				}
-			}
-
-			if (!map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^") || !map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+			} else {
 				int randEncounter = rand.nextInt(8);
 
 				if (randEncounter == 0) {

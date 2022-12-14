@@ -59,7 +59,12 @@ public class Battle {
 		flee = false;
 
 		while (Character.getLife() > 0 && enemyLife > 0) {
-			System.out.println("\nVida: " + Character.getLife() + "/" + Character.getMaxLife() + "\n\n" + enemy + " Vida: " + enemyLife);
+			System.out.println(
+				"\nJogador: " + Character.getName() +
+				"\nVida: " + Character.getLife() + "/" + Character.getMaxLife() +
+				"\nInimigo: " + enemy +
+				"\nVida: " + enemyLife
+			);
 
 			if (Character.getSpeed() > enemySpeed) {
 				Battle.action();
@@ -234,13 +239,13 @@ public class Battle {
 		damage = getRandInt(Character.getMinDamage(), Character.getMaxDamage());
 		enemyLife -= damage;
 
-		System.out.println("\nVocê ataca " + enemy + " para " + damage + " causar dano!");
+		System.out.println("\nVocê ataca " + enemy + " para causar " + damage + " de dano!");
 	}
 
 	public static void enemyAttack() {
 		int enemyDamage = getRandInt(enemyMinDamage, enemyMaxDamage);
 
-		System.out.println("\n" + enemy + " te ataca para " + enemyDamage + " causar dano!");
+		System.out.println("\n" + enemy + " te ataca para causar " + enemyDamage + " de dano!");
 
 		Character.loseLife(enemyDamage);
 	}
@@ -263,7 +268,7 @@ public class Battle {
 				Character.gainMaxDamage(Character.getMagic() / 2);
 				Character.gainSpeed(Character.getMagic());
 
-				System.out.println("\nVocê aprimora suas habilidades de batalha, aumentando suas estatísticas de dano em " + Character.getMagic() / 2 + " e aumentando sua velocidade " + Character.getMagic() + ".");
+				System.out.println("\nVocê aprimora suas habilidades de batalha, aumentando suas estatísticas de dano em " + Character.getMagic() / 2 + " e aumentando sua velocidade em " + Character.getMagic() + ".");
 			} else if (action.equals("2")) {
 				Character.gainLife(Character.getMagic());
 
@@ -373,7 +378,7 @@ public class Battle {
 	}
 
 	public static void victory() {
-		System.out.println("\nVocê é vitorioso!");
+		System.out.println("\nVocê venceu!");
 
 		goldGain = getRandInt(2, 5);
 

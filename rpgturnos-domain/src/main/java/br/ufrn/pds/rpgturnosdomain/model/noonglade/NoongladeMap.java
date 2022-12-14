@@ -2,6 +2,7 @@ package br.ufrn.pds.rpgturnosdomain.model.noonglade;
 
 import br.ufrn.pds.rpgturnosdomain.model.assets.Battle;
 import br.ufrn.pds.rpgturnosdomain.model.assets.Character;
+import br.ufrn.pds.rpgturnosdomain.model.designpatterns.TemplateMethod;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -42,37 +43,27 @@ public class NoongladeMap {
 				NoongladeCity.noongladeCity();
 
 				break;
-			}
-
-			if (xAxisPosition == 7 && yAxisPosition == 9) {
+			} else if (xAxisPosition == 7 && yAxisPosition == 9) {
 				System.out.println("\nVocê chega ao Reino do Norte de Cherry Ridge.");
 
 				CherryRidge.cherryRidge();
 
 				break;
-			}
-
-			if (xAxisPosition == 23 && yAxisPosition == 7) {
+			} else if (xAxisPosition == 23 && yAxisPosition == 7) {
 				System.out.println("\nVocê chega à cidade montanhosa de Wind Heath.");
 
 				WindHeath.windHeath();
 
 				break;
-			}
-
-			if (xAxisPosition == 24 && yAxisPosition == 2) {
+			} else if (xAxisPosition == 24 && yAxisPosition == 2) {
 				System.out.println("\nVocê chega à cidade portuária de Port.");
 
 				ThePort.thePort();
 
 				break;
-			}
-
-			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
+			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^")) {
 				Battle.randEncounter();
-			}
-
-			if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+			} else if (map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
 				System.out.println("\nVocês não sabem nadar!");
 
 				Character.loseLife(3);
@@ -80,9 +71,7 @@ public class NoongladeMap {
 				if (Character.getLife() < 1) {
 					Character.gameOver("\n\"Vocês engoliram muita água e se afogaram…");
 				}
-			}
-
-			if (!map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("^") || !map[top].substring(xAxisPosition, (xAxisPosition + 1)).equals("≈")) {
+			} else {
 				int randEncounter = rand.nextInt(8);
 
 				if (randEncounter == 0) {
@@ -148,7 +137,7 @@ public class NoongladeMap {
 
 		System.out.println("===============================");
 		System.out.println(
-			"\nLife: " + Character.getLife() + "/" + Character.getMaxLife() + "\t\t\t\t" +
+			"\nLife: " + Character.getLife() + "/" + Character.getMaxLife() + "\t\t" +
 			"\tX: " + xAxisPosition +
 			"\tY: " + yAxisPosition
 		);

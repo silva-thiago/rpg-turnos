@@ -182,4 +182,12 @@ public class KalldiridCity {
 	public static boolean lupineKnightSlain() {
 		return lupineKnightSlain;
 	}
+
+	public static boolean leonineKnightSlain() {
+		return leonineKnightSlain;
+	}
+
+	public static boolean hasLetter() {
+		return hasLetter;
+	}
 }

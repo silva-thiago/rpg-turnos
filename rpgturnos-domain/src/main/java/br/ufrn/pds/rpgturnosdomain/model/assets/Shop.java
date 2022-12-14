@@ -33,7 +33,7 @@ public class Shop {
 			"\n\t4. Elixir Forte - 30 ouros" +
 			"\n\t5. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if (choice == 1) {
@@ -92,7 +92,7 @@ public class Shop {
 			"\n\t4. Tomo místico - 10 ouros" +
 			"\n\t5. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if (choice == 1) {
@@ -150,7 +150,7 @@ public class Shop {
 			"\n\t4. Equipamento de Guerreiro - 20 ouros" +
 			"\n\t5. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if (choice == 1) {
@@ -209,7 +209,7 @@ public class Shop {
 			"\n\t4. Equipamento do Feiticeiro - 20 ouros" +
 			"\n\t5. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if (choice == 1) {
@@ -270,7 +270,7 @@ public class Shop {
 			"\n\t3. Ídolo Ancião - 25 ouros" +
 			"\n\t4. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if (choice == 1) {
@@ -318,7 +318,7 @@ public class Shop {
 			"\n\t3. Equipamento do Cavaleiro Branco - 40 ouros" +
 			"\n\t4. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if(choice == 1) {
@@ -376,7 +376,7 @@ public class Shop {
 			"\n\t3. Concealing Robe - 35 ouros" +
 			"\n\t4. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if(choice == 1) {
@@ -432,7 +432,7 @@ public class Shop {
 			"\n\t3. Tônico Revitalizante - 35 ouros" +
 			"\n\t4. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if(choice == 1) {
@@ -485,7 +485,7 @@ public class Shop {
 			"\n\t2. Kit do Herbalista - 25 ouros" +
 			"\n\t3. Sair"
 		);
-		System.out.print("\nQual desses itens você quer? ");
+		System.out.print("\nQual dessas opções você quer? ");
 		choice = scan.nextInt();
 
 		if(choice == 1) {
